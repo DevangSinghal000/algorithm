@@ -1,0 +1,11 @@
+def TowerOfHanoi(n , S, D, A):
+    if n==1:
+        print ("Move disk 1 from S",S,"to D",D)
+        return
+    TowerOfHanoi(n-1, S, A, D)
+    print ("Move disk",n,"from S",S,"to D",D)
+    TowerOfHanoi(n-1, A, D, S)
+         
+
+n = 4
+TowerOfHanoi(n,'A','B','C')
