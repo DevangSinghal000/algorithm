@@ -1,0 +1,14 @@
+def radixSort(array):
+    
+    max_element = max(array)
+
+  
+    place = 1
+    while max_element // place > 0:
+        countingSort(array, place)
+        place *= 10
+
+
+data = [141, 73, 74, 22, 13, 51, 78]
+radixSort(data)
+print(data)
